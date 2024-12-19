@@ -1,0 +1,571 @@
+
+*** Running vivado
+    with args -log Snake_Wrapper.vds -m64 -mode batch -messageDb vivado.pb -notrace -source Snake_Wrapper.tcl
+
+
+****** Vivado v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source Snake_Wrapper.tcl -notrace
+Command: synth_design -top Snake_Wrapper -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 264.715 ; gain = 87.059
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Snake_Wrapper' [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Snake_Wrapper.v:1]
+INFO: [Synth 8-638] synthesizing module 'Navigation_State_Machine' [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Navigtaion_State_Machine.v:1]
+	Parameter UP bound to: 2'b00 
+	Parameter DOWN bound to: 2'b01 
+	Parameter LEFT bound to: 2'b10 
+	Parameter RIGHT bound to: 2'b11 
+INFO: [Synth 8-256] done synthesizing module 'Navigation_State_Machine' (1#1) [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Navigtaion_State_Machine.v:1]
+INFO: [Synth 8-638] synthesizing module 'Master_State_Machine' [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Master_State_Machine.v:1]
+	Parameter START bound to: 2'b00 
+	Parameter PLAY bound to: 2'b01 
+	Parameter WINNER bound to: 2'b10 
+	Parameter LOSER bound to: 2'b11 
+INFO: [Synth 8-226] default block is never used [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Master_State_Machine.v:37]
+INFO: [Synth 8-256] done synthesizing module 'Master_State_Machine' (2#1) [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Master_State_Machine.v:1]
+INFO: [Synth 8-638] synthesizing module 'Random_Num' [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Random_Num.v:1]
+INFO: [Synth 8-256] done synthesizing module 'Random_Num' (3#1) [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Random_Num.v:1]
+INFO: [Synth 8-638] synthesizing module 'Score_Counter' [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Score_Counter.v:1]
+INFO: [Synth 8-226] default block is never used [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Score_Counter.v:82]
+INFO: [Synth 8-226] default block is never used [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Score_Counter.v:117]
+INFO: [Synth 8-256] done synthesizing module 'Score_Counter' (4#1) [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Score_Counter.v:1]
+INFO: [Synth 8-638] synthesizing module 'VGA_Interface' [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/VGA_Display.v:23]
+	Parameter VertTimeToPulseWidthEnd bound to: 10'b0000000010 
+	Parameter VertTimeToBackPorchEnd bound to: 10'b0000011111 
+	Parameter VertTimeToDisplayTimeEnd bound to: 10'b0111111111 
+	Parameter VertTimeToFrontPorchEnd bound to: 10'b1000001001 
+	Parameter HorzTimeToPulseWidthEnd bound to: 10'b0001100000 
+	Parameter HorzTimeToBackPorchEnd bound to: 10'b0010010000 
+	Parameter HorzTimeToDisplayTimeEnd bound to: 10'b1100010000 
+	Parameter HorzTimeToFrontPorchEnd bound to: 10'b1100100000 
+INFO: [Synth 8-638] synthesizing module 'Generic_counter' [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Generic_Counter.v:21]
+	Parameter COUNTER_WIDTH bound to: 2 - type: integer 
+	Parameter COUNTER_MAX bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Generic_counter' (5#1) [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Generic_Counter.v:21]
+WARNING: [Synth 8-350] instance 'Counte0' of module 'Generic_counter' requires 5 connections, but only 4 given [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/VGA_Display.v:49]
+INFO: [Synth 8-638] synthesizing module 'Generic_counter__parameterized0' [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Generic_Counter.v:21]
+	Parameter COUNTER_WIDTH bound to: 10 - type: integer 
+	Parameter COUNTER_MAX bound to: 799 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Generic_counter__parameterized0' (5#1) [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Generic_Counter.v:21]
+INFO: [Synth 8-638] synthesizing module 'Generic_counter__parameterized1' [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Generic_Counter.v:21]
+	Parameter COUNTER_WIDTH bound to: 9 - type: integer 
+	Parameter COUNTER_MAX bound to: 520 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Generic_counter__parameterized1' (5#1) [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Generic_Counter.v:21]
+INFO: [Synth 8-256] done synthesizing module 'VGA_Interface' (6#1) [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/VGA_Display.v:23]
+INFO: [Synth 8-638] synthesizing module 'Random_Colour' [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Random_Colour.v:1]
+INFO: [Synth 8-256] done synthesizing module 'Random_Colour' (7#1) [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Random_Colour.v:1]
+INFO: [Synth 8-638] synthesizing module 'Snake_Control' [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Snkae_Control.v:1]
+	Parameter BOUNDARY_THICKNESS bound to: 1 - type: integer 
+	Parameter SnakeLength bound to: 100 - type: integer 
+	Parameter Ini_Length bound to: 8 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Generic_counter__parameterized2' [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Generic_Counter.v:21]
+	Parameter COUNTER_WIDTH bound to: 23 - type: integer 
+	Parameter COUNTER_MAX bound to: 3500000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Generic_counter__parameterized2' (7#1) [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Generic_Counter.v:21]
+WARNING: [Synth 8-350] instance 'Cycle_Counter' of module 'Generic_counter' requires 5 connections, but only 4 given [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Snkae_Control.v:95]
+INFO: [Synth 8-638] synthesizing module 'Generic_counter__parameterized3' [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Generic_Counter.v:21]
+	Parameter COUNTER_WIDTH bound to: 12 - type: integer 
+	Parameter COUNTER_MAX bound to: 4094 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Generic_counter__parameterized3' (7#1) [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Generic_Counter.v:21]
+WARNING: [Synth 8-350] instance 'Colour_Counter' of module 'Generic_counter' requires 5 connections, but only 4 given [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Snkae_Control.v:105]
+INFO: [Synth 8-256] done synthesizing module 'Snake_Control' (8#1) [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Snkae_Control.v:1]
+INFO: [Synth 8-256] done synthesizing module 'Snake_Wrapper' (9#1) [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Snake_Wrapper.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 302.738 ; gain = 125.082
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 302.738 ; gain = 125.082
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/constrs_1/new/Snake_XDC.xdc]
+Finished Parsing XDC File [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/constrs_1/new/Snake_XDC.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 596.598 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 596.598 ; gain = 418.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 596.598 ; gain = 418.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 596.598 ; gain = 418.941
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "WIN" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Snkae_Control.v:209]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Snkae_Control.v:210]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Snkae_Control.v:209]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Snkae_Control.v:210]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Snkae_Control.v:209]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/Xilinx_Vivado_SDK_Win_2015.2_0626_1/New_Projects/Advanced_Snake/Advanced_Snake.srcs/sources_1/new/Snkae_Control.v:210]
+INFO: [Synth 8-5544] ROM "TARGET_SIZE" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "FrameCount" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 596.598 ; gain = 418.941
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     28 Bit       Adders := 1     
+	   2 Input     23 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   4 Input     12 Bit       Adders := 2     
+	   3 Input     12 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 3     
+	   2 Input      9 Bit       Adders := 5     
+	   3 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 4     
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 5     
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	               28 Bit    Registers := 1     
+	               23 Bit    Registers := 1     
+	               12 Bit    Registers := 5     
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 34    
+	                7 Bit    Registers := 33    
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 22    
++---Muxes : 
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 6     
+	   4 Input     12 Bit        Muxes := 1     
+	   6 Input     12 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 11    
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 10    
+	  11 Input      7 Bit        Muxes := 1     
+	   4 Input      7 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 4     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 5     
+	   6 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 205   
+	   4 Input      1 Bit        Muxes := 12    
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Navigation_State_Machine 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   6 Input      2 Bit        Muxes := 1     
+Module Master_State_Machine 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module Random_Num 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 2     
+Module Score_Counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     28 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               28 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	  11 Input      7 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module Generic_counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+Module Generic_counter__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module Generic_counter__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module VGA_Interface 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module Random_Colour 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               12 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module Generic_counter__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     23 Bit       Adders := 1     
++---Registers : 
+	               23 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module Generic_counter__parameterized3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module Snake_Control 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input     12 Bit       Adders := 2     
+	   3 Input     12 Bit       Adders := 2     
+	   3 Input      9 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 4     
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 32    
+	                7 Bit    Registers := 31    
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 4     
+	   4 Input     12 Bit        Muxes := 1     
+	   6 Input     12 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 8     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 8     
+	   4 Input      7 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 204   
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 596.598 ; gain = 418.941
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "WIN" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 596.598 ; gain = 418.941
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 596.598 ; gain = 418.941
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[22] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[21] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[20] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[19] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[18] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[17] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[16] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[15] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[14] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[13] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[12] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[11] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[10] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[9] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[8] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[7] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[6] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[5] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[4] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[3] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[2] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[1] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[0] ) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (Trigger_out_reg) is unused and will be removed from module Generic_counter__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[11] ) is unused and will be removed from module Generic_counter__parameterized3.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[10] ) is unused and will be removed from module Generic_counter__parameterized3.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[9] ) is unused and will be removed from module Generic_counter__parameterized3.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[8] ) is unused and will be removed from module Generic_counter__parameterized3.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[7] ) is unused and will be removed from module Generic_counter__parameterized3.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[6] ) is unused and will be removed from module Generic_counter__parameterized3.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[5] ) is unused and will be removed from module Generic_counter__parameterized3.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[4] ) is unused and will be removed from module Generic_counter__parameterized3.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[3] ) is unused and will be removed from module Generic_counter__parameterized3.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[2] ) is unused and will be removed from module Generic_counter__parameterized3.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[1] ) is unused and will be removed from module Generic_counter__parameterized3.
+WARNING: [Synth 8-3332] Sequential element (\count_value_reg[0] ) is unused and will be removed from module Generic_counter__parameterized3.
+WARNING: [Synth 8-3332] Sequential element (Trigger_out_reg) is unused and will be removed from module Generic_counter__parameterized3.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 596.598 ; gain = 418.941
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 596.598 ; gain = 418.941
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 596.598 ; gain = 418.941
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 600.426 ; gain = 422.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 601.480 ; gain = 423.824
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\Snake_C/Curr_Snake_reg[0] ) is unused and will be removed from module Snake_Wrapper.
+WARNING: [Synth 8-3332] Sequential element (\Snake_C/PixShift[29].SnakeState_Y_reg[30][6] ) is unused and will be removed from module Snake_Wrapper.
+WARNING: [Synth 8-3332] Sequential element (\Snake_C/PixShift[29].SnakeState_Y_reg[30][5] ) is unused and will be removed from module Snake_Wrapper.
+WARNING: [Synth 8-3332] Sequential element (\Snake_C/PixShift[29].SnakeState_Y_reg[30][4] ) is unused and will be removed from module Snake_Wrapper.
+WARNING: [Synth 8-3332] Sequential element (\Snake_C/PixShift[29].SnakeState_Y_reg[30][3] ) is unused and will be removed from module Snake_Wrapper.
+WARNING: [Synth 8-3332] Sequential element (\Snake_C/PixShift[29].SnakeState_Y_reg[30][2] ) is unused and will be removed from module Snake_Wrapper.
+WARNING: [Synth 8-3332] Sequential element (\Snake_C/PixShift[29].SnakeState_Y_reg[30][1] ) is unused and will be removed from module Snake_Wrapper.
+WARNING: [Synth 8-3332] Sequential element (\Snake_C/PixShift[29].SnakeState_Y_reg[30][0] ) is unused and will be removed from module Snake_Wrapper.
+WARNING: [Synth 8-3332] Sequential element (\Snake_C/PixShift[29].SnakeState_X_reg[30][7] ) is unused and will be removed from module Snake_Wrapper.
+WARNING: [Synth 8-3332] Sequential element (\Snake_C/PixShift[29].SnakeState_X_reg[30][6] ) is unused and will be removed from module Snake_Wrapper.
+WARNING: [Synth 8-3332] Sequential element (\Snake_C/PixShift[29].SnakeState_X_reg[30][5] ) is unused and will be removed from module Snake_Wrapper.
+WARNING: [Synth 8-3332] Sequential element (\Snake_C/PixShift[29].SnakeState_X_reg[30][4] ) is unused and will be removed from module Snake_Wrapper.
+WARNING: [Synth 8-3332] Sequential element (\Snake_C/PixShift[29].SnakeState_X_reg[30][3] ) is unused and will be removed from module Snake_Wrapper.
+WARNING: [Synth 8-3332] Sequential element (\Snake_C/PixShift[29].SnakeState_X_reg[30][2] ) is unused and will be removed from module Snake_Wrapper.
+WARNING: [Synth 8-3332] Sequential element (\Snake_C/PixShift[29].SnakeState_X_reg[30][1] ) is unused and will be removed from module Snake_Wrapper.
+WARNING: [Synth 8-3332] Sequential element (\Snake_C/PixShift[29].SnakeState_X_reg[30][0] ) is unused and will be removed from module Snake_Wrapper.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 671.121 ; gain = 493.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 671.121 ; gain = 493.465
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 671.121 ; gain = 493.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 671.121 ; gain = 493.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 671.121 ; gain = 493.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 671.121 ; gain = 493.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    70|
+|3     |LUT1   |   126|
+|4     |LUT2   |   160|
+|5     |LUT3   |   119|
+|6     |LUT4   |    93|
+|7     |LUT5   |   146|
+|8     |LUT6   |   761|
+|9     |MUXF7  |     3|
+|10    |FDCE   |    84|
+|11    |FDPE   |    24|
+|12    |FDRE   |   498|
+|13    |FDSE   |   156|
+|14    |IBUF   |    11|
+|15    |OBUF   |    34|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------+--------------------------------+------+
+|      |Instance      |Module                          |Cells |
++------+--------------+--------------------------------+------+
+|1     |top           |                                |  2286|
+|2     |  APPLE       |Random_Num                      |   180|
+|3     |  Appearance  |Random_Colour                   |    41|
+|4     |  MARK        |Score_Counter                   |   384|
+|5     |  Master      |Master_State_Machine            |    15|
+|6     |  NAV         |Navigation_State_Machine        |     5|
+|7     |  Snake_C     |Snake_Control                   |  1041|
+|8     |  VGA         |VGA_Interface                   |   572|
+|9     |    Counte0   |Generic_counter                 |     6|
+|10    |    Counter_H |Generic_counter__parameterized0 |    39|
+|11    |    Counter_V |Generic_counter__parameterized1 |    27|
++------+--------------+--------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 671.121 ; gain = 493.465
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 53 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 671.121 ; gain = 166.555
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 671.121 ; gain = 493.465
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 81 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+51 Infos, 56 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 671.121 ; gain = 461.563
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 671.121 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 22 19:40:39 2024...
